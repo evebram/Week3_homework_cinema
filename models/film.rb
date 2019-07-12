@@ -46,4 +46,11 @@ class Film
     SqlRunner.run(sql, values)
   end
 
+  def customers()
+    sql = ""
+    values = [@id]
+    customer_data = SqlRunner.run(sql, values)
+    return customer_data.map{|customers|Customer.new(customers)}
+  end
+
 end
