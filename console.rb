@@ -66,6 +66,5 @@ ticket4 = Ticket.new({
   })
 ticket4.save()
 
-
 binding.pry
 nil

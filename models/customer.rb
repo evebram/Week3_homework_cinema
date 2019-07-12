@@ -55,4 +55,9 @@ class Customer
     return film_data.map{|films|Film.new(films)}
   end
 
+  def buy_ticket(film)
+    @funds -= film.price
+    update()
+  end
+
 end
