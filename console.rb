@@ -17,5 +17,19 @@ film1 = Film.new({
   'price' => 6
   })
 
+customer1 = Customer.new({
+  'name' => 'Bruno'
+  'funds' => 20
+  })
+customer1 = Customer.new({
+  'name' => 'Joseph'
+  'funds' => 30
+  })
+customer1 = Customer.new({
+  'name' => 'Trish'
+  'funds' => 15
+  })
+
+
 binding.pry
 nil

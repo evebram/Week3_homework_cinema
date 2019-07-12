@@ -10,3 +10,5 @@ class Customer
     @name = options['name']
     @funds = options['funds']
   end
+
+end
