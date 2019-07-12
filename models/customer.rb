@@ -60,4 +60,12 @@ class Customer
     update()
   end
 
+  def tickets()
+    sql = "SELECT tickets.* FROM tickets
+           WHERE tickets.customer_id = $1"
+    values = [@id]
+    ticket_data = SqlRunner.run(sql, values)
+    return ticket_data.count{|tickets|Ticket.new(tickets)}
+  end
+
 end
