@@ -11,6 +11,13 @@ class Film
     @price = options['price']
   end
 
-
+  def save()
+    sql = "INSERT INTO films (title, price)
+           VALUES ($1, $2)
+           RETURNING id"
+    values = [@title, @price]
+    film = SQLRunner.run(sql, values).first
+    @id = film['id'].to_i
+  end
 
 end
